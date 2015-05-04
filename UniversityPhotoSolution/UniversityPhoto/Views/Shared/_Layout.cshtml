@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="template-interior">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/favicon.ico" rel="icon">
+
+    <title>University Photo</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!--[if lt IE 9]>
+    <script src="/Scripts/ie8-polyfills.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="container">
+
+            <h2 class="logo">
+                <a href="#" title="University Photo">
+                    <img src="~/images/logo.png" alt="University Photo">
+                </a>
+            </h2>
+            <nav class="page-nav" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="composites-greek.html">Composites</a>
+                        <ul>
+                            <li><a href="composites-greek.html">Greek</a></li>
+                            <li><a href="composites-pro.html">Professional</a></li>
+                            <li><a href="composites-schedule.html">Schedule Your Session</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="bid-day.html" data-scrollto="#bid-day">Bid Day</a></li>
+                    <li><a href="party-pics.html">Party Pics</a></li>
+                    <li><a href="book-a-photographer.html">Book A Photographer</a></li>
+                    <li>
+                        <a href="customer-service.html">Customer Service</a>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="track-orders.html">Track Orders</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="purchase-photos.html" class="btn btn-default">Purchase Photos</a>
+
+        </div>
+    </header>
+
+    <main class="page-main">
+        @RenderBody()
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="social">
+                        <ul>
+                            <li>
+                                <a href="http://www.facebook.com/universityphoto" target="_blank">
+                                    <span class="icon icon-facebook"></span>
+                                    <span class="sr-only">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com/UnivPhoto" target="_blank">
+                                    <span class="icon icon-twitter"></span>
+                                    <span class="sr-only">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/univphoto" target="_blank">
+                                    <span class="icon icon-pinterest"></span>
+                                    <span class="sr-only">Pinterest</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.pinterest.com/UnivPhoto" target="_blank">
+                                    <span class="icon icon-instagram"></span>
+                                    <span class="sr-only">Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="copyright">
+                        &copy;2015 Event Photography Group. All Rights Reserved.<br>
+                        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms-of-use.html">Terms of Use</a> &nbsp;|&nbsp; <a href="http://www.epghire.com/Jobs/">Jobs</a>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <img src="~/images/product-seal.jpg" class="product-seal">
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

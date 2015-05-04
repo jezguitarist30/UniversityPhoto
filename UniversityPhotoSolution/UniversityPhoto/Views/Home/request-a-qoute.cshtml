@@ -1,0 +1,252 @@
+﻿<div class="page-title">
+    <div class="container">
+        <h1>@ViewBag.Title</h1>
+    </div>
+</div>
+<div class="container">
+
+    <p>To request a quote from University Photo for professional photography services, please complete the form below.  Our sales team will be in touch as soon as possible.</p>
+    <div id="mc_embed_signup_scroll">
+        
+        <form method="post" action="//eventphotographygroup.us10.list-manage.com/subscribe/post?u=aad4da9e1eedce9b4bc0c07f2&amp;id=b6075246ba" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+            <div class="row relative">
+                <div class="col-xs-5">
+                    <div class="form-group">
+                        <label for="School_Name">School or University Name*</label>
+                        <input type="text" value="" name="mce-SCHOOLNAME" id="mce-SCHOOLNAME" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Organization_Name">Organization Name*</label>
+                        <input type="text" value="" name="mce-ORGNAME" id="mce-ORGNAME" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Organization_Name">Estimated Number of Members*</label>
+                        <input type="text" value="" name="mce-MEMBERS" id="mce-MEMBERS" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Organization_Name">Event Type*</label>
+                        <select class="form-control" value="" name="mce-EVENTTYPE" id="mce-EVENTTYPE">
+                            <option value="Composite" selected>Composite</option>
+                            <option value="Bid Day">Bid Day</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Organization_Name">Semester to be Photographed</label>
+                        <select class="form-control" value="" name="mce-SEMESTER" id="mce-SEMESTER">
+                            <option value="Fall" selected>Fall</option>
+                            <option value="Spring">Spring</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="or">
+                    <span>AND</span>
+                </div>
+
+                <div class="col-xs-5 col-xs-offset-2">
+                    <div class="form-group">
+                        <label for="School_Name">Your First &amp; Last Name*</label>
+                        <input type="text" value="" name="mce-FULLNAME" id="mce-FULLNAME" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="School_Name">Your Title Within the Organization*</label>
+                        <input type="text" value="" name="mce-TITLE" id="mce-TITLE" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="School_Name">Phone Number</label>
+                        <input type="text" value="" name="mce-PHONE" id="mce-PHONE" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="School_Name">Email Address*</label>
+                        <input type="text" value="" name="mce-EMAIL" id="mce-EMAIL" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Organization_Name">How did you hear about us?</label>
+                        <select class="form-control" value="" name="mce-REFERRER" id="mce-REFERRER">
+                            <option value="Facebook" selected>Facebook</option>
+                            <option value="Twitter">Twitter</option>
+                            <option value="Referral (see comments)">Referral (see comments)</option>
+                            <option value="Online Search">Online Search</option>
+                            <option value="Convention">Convention</option>
+                            <option value="Advertisement">Advertisement</option>
+                            <option value="Email">Email</option>
+                            <option value="Campus Sales Rep">Campus Sales Rep</option>
+                            <option value="Other (see comments)">Other (see comments)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="School_Name">Comments / Remarks</label>
+                        <input type="text" value="" name="mce-COMMENTS" id="mce-COMMENTS" class="form-control">
+                        <p class="small"> If you chose &quot;Referral&quot; above, please list the name and email address of who referred us to you. If you chose &quot;Other,&quot; please tell us how you heard about University Photo. </p>
+                    </div>
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_aad4da9e1eedce9b4bc0c07f2_b6075246ba" tabindex="-1" value=""></div>
+
+            </div>
+
+            <p>&nbsp;</p>
+            <p class="text-center">
+                <button type="submit" class="btn btn-default" id="mc-embedded-subscribe">Submit</button>
+            </p>
+
+        </form>
+    </div>
+</div>
+
+
+@section scripts{
+    
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            $("#mc-embedded-subscribe-form").bootstrapValidator({
+                excluded: [':disabled', ':hidden', ':not(:visible)'],
+                live: 'enabled',
+                message: 'Please fill out this field.',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    "mce-SCHOOLNAME": {
+                        validators: {
+                            notEmpty: {
+                                message: 'School Name or University is required and cannot be empty!'
+                            },
+                            stringLength: {
+                                max: 50,
+                                message: "School Name or University can't exceed 50 characters long!"
+                            }
+                        }
+                    },
+                    "mce-ORGNAME": {
+                        validators: {
+                            notEmpty: {
+                                message: 'Organization Name is required and cannot be empty!'
+                            },
+                            stringLength: {
+                                max: 50,
+                                message: "Organization Name can't exceed 50 characters long!"
+                            }
+                        }
+
+                    },
+                    "mce-MEMBERS": {
+                        validators: {
+                            notEmpty: {
+                                message: 'Estimated Number of Members is required and cannot be empty!'
+                            },
+                            digits: {
+                                message: 'The value is not a valid number.'
+                            },
+                            stringLength: {
+                                max: 6,
+                                message: "Estimated Number of Members can't exceed 6 characters long!"
+                            }
+                        }
+
+                    },
+                    "mce-EVENTTYPE": {
+                        validators: {
+                            notEmpty: {
+                                message: 'Event Type is required and cannot be empty!'
+                            },
+                            stringLength: {
+                                max: 20,
+                                message: "Event Type can't exceed 20 characters long!"
+                            }
+                        }
+                    },
+                    "mce-FULLNAME": {
+                        validators: {
+                            notEmpty: {
+                                message: 'Full Name is required and cannot be empty!'
+                            },
+                            stringLength: {
+                                max: 150,
+                                message: "Full Name can't exceed 150 characters long!"
+                            }
+                        }
+
+                    },
+                    "mce-TITLE": {
+                        validators: {
+                            notEmpty: {
+                                message: 'Title is required and cannot be empty!'
+                            },
+                            stringLength: {
+                                max: 50,
+                                message: "Title can't exceed 50 characters long!"
+                            }
+                        }
+
+                    },
+                    "mce-EMAIL": {
+                        validators: {
+                            notEmpty: {
+                                message: 'Email is required and cannot be empty!'
+                            },
+                            stringLength: {
+                                max: 50,
+                                message: "Email can't exceed 50 characters long!"
+                            },
+                            emailAddress: {
+                                message: 'The input is not a valid email address!'
+                            }
+                        }
+
+                    }
+                },
+                onSuccess: function (e) {
+
+                    e.preventDefault();
+
+                    submitRequest();
+                }
+
+            });
+
+
+            function submitRequest() {
+
+                var postData = $("#mc-embedded-subscribe-form").serializeArray();
+                var formURL = $("#mc-embedded-subscribe-form").attr("action");
+                console.log(postData);
+
+                $.ajax({
+                    type: "POST", //GET or POST or PUT or DELETE verb
+                    url: formURL,
+                    data: postData,
+                    contentType: "application/json; charset=utf-8", // content type sent to server
+                    dataType: "json", //Expected data format from server
+                    processdata: true, //True or False
+                    success: function(result) { //On Successfull service call                        
+
+                        console.log(result);
+                        window.location.href = "/home/request-a-qoute-success";
+
+                    },
+                    error: function(err) {
+
+                        alert("We're sorry, your request could not be processed at this time. Please try again or call our office at (866) 381-3031 for assistance");
+
+
+                    } // When Service call fails
+
+                });
+            }
+
+        });
+
+    </script>
+
+}

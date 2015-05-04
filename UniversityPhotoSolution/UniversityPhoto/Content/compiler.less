@@ -1,0 +1,1081 @@
+@import "bootstrap-3.3.0/bootstrap.less";
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Override default Bootstrap configuration
+@body-bg:										#f1f1f1;
+
+@link-hover-color:								lighten(@link-color, 15%);
+@link-hover-decoration:							none;
+
+@text-color:									#272727;
+@font-size-base:								20px;
+@line-height-base:								1.5;
+
+@headings-font-family:							~"ProximaNova-Semibold, Arial, Helvetica, sans-serif";
+@headings-font-weight:							normal;
+@font-size-h1:									36px;
+@font-size-h2:									30px;
+@font-size-h3:									24px;
+@font-size-h4:									20px;
+@font-size-h5:									18px;
+@font-size-h6:									16px;
+
+@link-color:									#c32026;
+
+@hr-border:										#ccc;
+
+@btn-default-bg:								#c32026;
+@btn-default-color:								#fff;
+
+@container-sm:									970px;
+@container-md:									970px;
+@container-lg:									970px;
+
+@navbar-height:									60px;
+@navbar-default-color:							#1c2333;
+
+@navbar-padding-vertical:						18px;
+@navbar-default-link-color:						@text-color;
+@navbar-default-link-hover-color:				#c32026;
+@navbar-default-link-hover-bg:					transparent;
+@navbar-default-link-active-color:				#c32026;
+@navbar-default-link-active-bg:					transparent;
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Override default Bootstrap container width
+.container {
+	width: 970px;
+}
+
+
+// Override default Bootstrap button styles
+.btn {
+	padding: 8px 30px;
+	border: 0;
+	border-radius: 40px;
+	font-size: 16px;
+	text-transform: uppercase;
+	
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	&.open > .dropdown-toggle.btn-default {
+		background-color: #e8363c;
+	}
+	
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			outline: none;
+		}
+	}
+}
+
+.btn-link {
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	&.open > .dropdown-toggle.btn-default {
+		background-color: transparent;
+	}
+	
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+
+// Override default Bootstrap spacing on ".form-group"
+.form-group {
+	margin-bottom: @line-height-computed;
+}
+
+
+// Override and extend Bootstrap Carousel
+.carousel {
+	.icon-arrow-left-light,
+	.icon-arrow-right-light,
+	.icon-arrow-left-dark,
+	.icon-arrow-right-dark {
+		margin-top: -20px;
+		margin-left: -20px;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 5;
+	}
+}
+
+.carousel-inner {
+	z-index: 10;
+}
+
+.carousel-bg {
+	background-position: center;
+	//background-attachment: fixed; // this does not work in Chrome at all when its also set to "cover"
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.carousel-caption {
+	padding-bottom: 0;
+	top: 25%;
+	left: 25%;
+	right: 25%;
+	bottom: 0;
+}
+
+.carousel-control {
+	z-index: 20;
+}
+
+.carousel-indicators li {
+	margin-left: 6px;
+	margin-right: 6px;
+	background-color: #fff;
+	border: 0;
+	
+	&.active {
+		width: 10px;
+		height: 10px;
+		margin: 1px 6px;
+		background-color: #c32026;
+	}
+}
+
+.carousel-expanded {
+	margin-bottom: 60px;
+	
+	.carousel-indicators {
+		bottom: -60px;
+	}
+	
+	.carousel-control {
+		background-image: none;
+		
+		&.left {
+			left: -15%;
+		}
+		
+		&.right {
+			right: -15%;
+		}
+	}
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Proxima Nova Font Family
+@font-face {
+	font-family: "ProximaNova-Regular";
+	src: url("../fonts/proximanova-regular-webfont.eot");
+	src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/proximanova-regular-webfont.woff") format("woff"),
+	     url("../fonts/proximanova-regular-webfont.ttf") format("truetype"),
+	     url("../fonts/proximanova-regular-webfont.svg#ProximaNova_rgregular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ProximaNova-Bold";
+	src: url("../fonts/proximanova-bold-webfont.eot");
+	src: url("../fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/proximanova-bold-webfont.woff") format("woff"),
+	     url("../fonts/proximanova-bold-webfont.ttf") format("truetype"),
+	     url("../fonts/proximanova-bold-webfont.svg#ProximaNova_rgbold") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ProximaNova-Italic";
+	src: url("../fonts/proximanova-italic-webfont.eot");
+	src: url("../fonts/proximanova-italic-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/proximanova-italic-webfont.woff") format("woff"),
+	     url("../fonts/proximanova-italic-webfont.ttf") format("truetype"),
+	     url("../fonts/proximanova-italic-webfont.svg#proxima_novaregular_italic") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ProximaNova-BoldItalic";
+	src: url("../fonts/proximanova-bolditalic-webfont.eot");
+	src: url("../fonts/proximanova-bolditalic-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/proximanova-bolditalic-webfont.woff") format("woff"),
+	     url("../fonts/proximanova-bolditalic-webfont.ttf") format("truetype"),
+	     url("../fonts/proximanova-bolditalic-webfont.svg#ProximaNova_rgbold_italic") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ProximaNova-Semibold";
+	src: url("../fonts/proximanova-semibold-webfont.eot");
+	src: url("../fonts/proximanova-semibold-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/proximanova-semibold-webfont.woff") format("woff"),
+	     url("../fonts/proximanova-semibold-webfont.ttf") format("truetype"),
+	     url("../fonts/proximanova-semibold-webfont.svg#proxima_novasemibold") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Scaffolding
+html {
+	background-color: #fff;
+}
+body {
+	font-size: 20px;
+	font-family: ProximaNova-Regular, Arial, Helvetica, sans-serif;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	margin-top: 0;
+}
+h2, h3 {
+	font-family: ProximaNova-Regular, Arial, Helvetica, sans-serif;
+}
+p, ul, ol, table {
+	margin-bottom: @line-height-computed;
+}
+b, strong {
+	font-family: ProximaNova-Bold, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+i, em {
+	font-family: ProximaNova-Italic, Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+b i, b em, strong i, strong em,
+i b, i strong, em b, em strong {
+	font-family: ProximaNova-BoldItalic, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// List with the default bullets replaced with stars
+.list-stars {
+	padding-left: 0;
+	
+	> li {
+		margin-bottom: 5px;
+		padding-left: 30px;
+		background: url("../images/bullet-star.png") 5px 6px no-repeat;
+		list-style: none;
+	}
+}
+
+
+// Icons
+.icon {
+	.text-hide();
+	
+	width: 40px;
+	height: 40px;
+	background-image: url("../images/icons.png");
+	background-color: transparent;
+	background-repeat: none;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+}
+
+.icon-facebook	{ background-position: 0 0; }
+.icon-twitter	{ background-position: -40px 0; }
+.icon-pinterest	{ background-position: -80px 0; }
+.icon-instagram	{ background-position: -120px 0; }
+
+.icon-arrow-up-light	{ background-position: 0 -80px; }
+.icon-arrow-down-light	{ background-position: -40px -80px; }
+.icon-arrow-left-light	{ background-position: -80px -80px; }
+.icon-arrow-right-light	{ background-position: -120px -80px; }
+
+.icon-arrow-up-dark		{ background-position: 0 -120px; }
+.icon-arrow-down-dark	{ background-position: -40px -120px; }
+.icon-arrow-left-dark	{ background-position: -80px -120px; }
+.icon-arrow-right-dark	{ background-position: -120px -120px; }
+
+.icon-arrow-left-red,
+.icon-arrow-right-red {
+	width: 30px;
+	height: 30px;
+}
+.icon-arrow-left-red	{ background-position: 0 -160px; }
+.icon-arrow-right-red	{ background-position: -30px -160px; }
+
+.icon-arrow-up-light,
+.icon-arrow-down-light,
+.icon-arrow-left-light,
+.icon-arrow-right-light,
+.icon-arrow-up-dark,
+.icon-arrow-down-dark,
+.icon-arrow-left-dark,
+.icon-arrow-right-dark	{
+	opacity: .5;
+	
+	.transition(opacity .35s ease);
+}
+
+a:hover {
+	.icon-facebook	{ background-position: 0 -40px; }
+	.icon-twitter	{ background-position: -40px -40px; }
+	.icon-pinterest	{ background-position: -80px -40px; }
+	.icon-instagram	{ background-position: -120px -40px; }
+	
+	.icon-arrow-up-light,
+	.icon-arrow-down-light,
+	.icon-arrow-left-light,
+	.icon-arrow-right-light,
+	.icon-arrow-up-dark,
+	.icon-arrow-down-dark,
+	.icon-arrow-left-dark,
+	.icon-arrow-right-dark	{
+		opacity: 1;
+	}
+	
+	.icon-arrow-left-red	{ background-position: 0 -190px; }
+	.icon-arrow-right-red	{ background-position: -30px -190px; }
+}
+
+
+// Quick relative positioning
+.relative {
+	position: relative;
+}
+
+
+// "Or" divider
+.or {
+	width: 1px;
+	background-color: #ccc;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	bottom: 0;
+	
+	span {
+		width: @grid-gutter-width;
+		margin-top: -@grid-gutter-width;
+		padding-top: floor(@grid-gutter-width / 2);
+		padding-bottom: floor(@grid-gutter-width / 2);
+		background: #f1f1f1;
+		font-weight: bold;
+		position: absolute;
+		top: 50%;
+		left: floor(-@grid-gutter-width / 2);
+	}
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Header
+.page-header {
+	height: 150px;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	border-bottom: 0;
+	box-shadow: 0 0 16px 0 rgba(0, 0, 0, .15);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	
+	.container {
+		position: relative;
+		
+		> .btn {
+			position: absolute;
+			top: 25px;
+			right: 0;
+		}
+	}
+}
+
+
+// Logo
+.logo {
+	margin: 0;
+	padding-top: 30px;
+	float: left;
+}
+
+
+// Main Navigation
+.page-nav {
+	float: right;
+	position: relative;
+	top: 90px;
+	
+	.nav {
+		margin-right: -@grid-gutter-width;
+		border: 0;
+		
+		> li {
+			font-size: 16px;
+			font-family: ProximaNova-Semibold, Arial, Helvetica, sans-serif;
+			float: left;
+			
+			> a {
+				padding-top: 15px;
+					padding-bottom: 15px;
+				color: @text-color;
+				
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					color: #c32026;
+				}
+			}
+			
+			&:hover > a:after,
+			> a:hover:after {
+				margin-left: -10px;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				content: "";
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-bottom: 10px solid #c32026;
+			}
+			
+			> ul {
+				width: 250px;
+				margin: 0;
+				padding: 6px 0;
+				background-color: #c32026;
+				border: 0;
+				border-radius: 0;
+				box-shadow: none;
+				font-size: 16px;
+				display: none;
+				position: absolute;
+				top: 60px;
+				left: 0;
+				
+				> li {
+					list-style: none;
+					
+					> a {
+						padding: 10px 20px;
+						color: #fff;
+						display: block;
+						
+						&:hover,
+						&:focus {
+							background-color: darken(#c32026, 5%);
+						}
+					}
+				}
+			}
+			
+			&:last-child {
+				> ul {
+					left: auto;
+					right: 0;
+				}
+			}
+			
+			&:hover > ul {
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Main Content
+.page-main {
+	min-height: 500px;
+	padding-bottom: 60px;
+	position: relative;
+	z-index: 10;
+	
+	.template-interior & {
+		padding-top: 150px;
+	}
+}
+
+
+// Page Title
+.page-title {
+	margin-bottom: 50px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background-color: #272727;
+	
+	h1 {
+		margin: 0;
+		color: #fff;
+		font-size: 36px;
+		line-height: 1;
+	}
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Index Content
+.page-index {
+	padding-bottom: 0;
+	position: relative;
+	z-index: 10;
+}
+
+
+// Index Section
+.index-section {
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+		
+	h2, .h2 {
+		margin-top: 0;
+		font-size: 40px;
+	}
+	
+	h2, .h2,
+	h3, .h3 {
+		font-family: ProximaNova-Semibold, Arial, Helvetica, sans-serif;
+	}
+}
+
+.index-section-1,
+.index-section-3,
+.index-section-5,
+.index-section-7 {
+	color: #fff;
+}
+
+.index-section-3,
+.index-section-5,
+.index-section-7 {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.index-section-2,
+.index-section-4,
+.index-section-6 {
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+
+.index-section-2,
+.index-section-6 {
+	.carousel-control {
+		&.left,
+		&.right {
+			background-image: none;
+		}
+		&.left {
+			left: -150px;
+		}
+		&.right {
+			right: -150px;
+		}
+	}
+}
+
+.index-section-1 {
+	height: 600px;
+	margin-top: 150px;
+	background-color: #272727;
+	
+	.carousel {
+		height: 600px;
+		
+		.item {
+			height: 600px;
+		}
+	}
+}
+
+.index-section-2 {
+	.row {
+		margin-bottom: 50px;
+	}
+	
+	.btn + .btn {
+		margin-left: 35px;
+	}
+}
+
+.index-section-3 {
+	height: 540px;
+	background-image: url("../images/index-parallax-1.jpg");
+}
+
+.index-section-4 {
+	padding-bottom: 60px;
+	text-align: center;
+	overflow: hidden; // for the "composite panel" sliding transition
+	
+	.icon-arrow-left-red,
+	.icon-arrow-right-red {
+		margin-left: 6px;
+		margin-right: 6px;
+	}
+	
+	
+	// Composites
+	.composite-options {
+		margin-top: 30px;
+		position: relative;
+	}
+	.composite-panel {
+		height: 350px;
+		position: relative;
+		
+		&,
+		.cover,
+		.content {
+			.transition-transform(.35s ease);
+		}
+		.cover,
+		.content {
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.cover {
+			padding-top: 35px;
+			z-index: 2;
+		}
+		.content {
+			padding-top: 15px;
+			padding-left: 40px;
+			padding-right: 40px;
+			border-left: 1px solid #a3a3a3;
+			border-right: 1px solid #a3a3a3;
+			font-size: 16px;
+			text-align: left;
+			z-index: 1;
+			
+			.translate(0, 0);
+			
+			li {
+				margin-bottom: 7px;
+			}
+			
+			&:before,
+			&:after {
+				margin-top: -25px;
+				border-top: 25px solid transparent;
+				border-bottom: 25px solid transparent;
+				content: "";
+				position: absolute;
+				top: 50%;
+			}
+		}
+		
+		
+		// Default panels
+		&.greek {
+			.cover {
+				margin-left: -25px;
+				padding-left: 25px;
+			}
+			.content {
+				right: -16px;
+				
+				&:before {
+					border-right: 24px solid #a3a3a3;
+					left: -25px;
+					z-index: 1;
+				}
+				&:after {
+					border-right: 24px solid #fff;
+					left: -24px;
+					z-index: 2;
+				}
+			}
+			
+			.icon-arrow-left-red {
+				display: none;
+			}
+			.icon-arrow-right-red {
+				display: inline-block;
+			}
+			
+			&.active {
+				.icon-arrow-left-red {
+					display: inline-block;
+				}
+				.icon-arrow-right-red {
+					display: none;
+				}
+			}
+		}
+		&.professional {
+			.cover {
+				margin-right: -25px;
+				padding-right: 25px;
+			}
+			.content {
+				left: -16px;
+				
+				&:before {
+					border-left: 24px solid #a3a3a3;
+					right: -25px;
+					z-index: 1;
+				}
+				&:after {
+					border-left: 24px solid #fff;
+					right: -24px;
+					z-index: 2;
+				}
+			}
+			
+			.icon-arrow-left-red {
+				display: inline-block;
+			}
+			.icon-arrow-right-red {
+				display: none;
+			}
+			
+			&.active {
+				.icon-arrow-left-red {
+					display: none;
+				}
+				.icon-arrow-right-red {
+					display: inline-block;
+				}
+			}
+		}
+		
+		
+		// Active panels
+		&.greek.active {
+			.content {
+				.translate(400px, 0);
+			}
+		}
+		
+		&.professional.active {
+			.content {
+				.translate(-400px, 0);
+			}
+		}
+		
+		
+		// Disabled panels
+		&.greek.disabled {
+			opacity: .35;
+			
+			.translate(-100%, 0);
+		}
+		
+		&.professional.disabled {
+			opacity: .35;
+			
+			.translate(100%, 0);
+		}
+		
+		.btn-link[disabled] {
+			opacity: 1;
+		}
+	}
+}
+
+.index-section-5 {
+	height: 540px;
+	background-image: url("../images/index-parallax-2.jpg");
+}
+
+.index-section-6 {
+	padding-bottom: 60px;
+}
+
+.index-section-7 {
+	height: 440px;
+	padding-top: 120px;
+	background-image: url("../images/index-parallax-3.jpg");
+	text-align: center;
+}
+
+
+// Green Screen Demo
+.greenscreen-demo {
+	overflow: hidden;
+	position: relative;
+	
+	.before {
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		
+		.transition(width .5s ease);
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	
+	&:hover {
+		.before {
+			width: 0%;
+		}
+	}
+	
+	.after {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Footer
+.page-footer {
+	padding-top: 70px;
+	padding-bottom: 100px;
+	background-color: #fff;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+}
+
+
+// Social Media Icons
+.social {
+	&:extend(.clearfix all);
+	
+	padding-top: 3px;
+	
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	
+	li {
+		margin-right: 10px;
+		list-style: none;
+		display: inline-block;
+		float: left;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	a {
+		display: block;
+	}
+}
+
+
+// Copyright
+.copyright {
+	font-size: 16px;
+	text-align: center;
+	
+	a {
+		color: inherit;
+		text-decoration: underline;
+		
+		&:hover,
+		&:focus {
+			color: #c32026;
+		}
+	}
+}
+
+
+// Product Seal
+.product-seal {
+	margin-top: -25px;
+	text-align: right;
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// FAQ
+.faq-item {
+	margin-top: @line-height-computed;
+	margin-bottom: @line-height-computed;
+	
+	h3 {
+		margin-top: 0;
+		margin-bottom: 5px;
+		font-size: @font-size-h4;
+		font-family: ProximaNova-Bold, Arial, Helvetica, sans-serif;
+	}
+	
+	p {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Skrollr setup
+html.skrollr-enabled,
+.skrollr-enabled body {
+	height: 100%;
+}
+.skrollr-desktop body {
+	height: 100% !important;
+}
+.skrollr-enabled .page {
+	height: 100%;
+	overflow: visible;
+	position: relative;
+	z-index: 1;
+}
+
+
+// Skrollr Containers
+.skrollr-layer {
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	z-index: 2;
+}
+.skrollr-layer-50 {
+	height: 50%;
+	top: -50%;
+}
+.skrollr-layer-100 {
+	height: 100%;
+	top: -100%;
+}
+.no-skrollr .skrollr-layer {
+	display: none !important;
+}
+
+
+// Parallax Images
+.skrollr-layer-image {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.skrollr-layer-50 .skrollr-layer-image {
+	height: 200%;
+	top: -50%;
+}
+.skrollr-layer-100 .skrollr-layer-image {
+	height: 100%;
+	top: 0;
+}
+.skrollr-layer-image.skrollable-between {
+	display: block;
+}
+
+
+// Parallax Anchors
+.skrollr-layer-anchor {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.skrollr-layer-anchor-50 {
+	height: 50%;
+}
+.skrollr-layer-anchor-100 {
+	height: 100%;
+}
